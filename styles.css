@@ -1,0 +1,444 @@
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	color: #555;
+}
+
+ul, nav{
+	list-style: none;
+}
+
+a {
+	font-family: "Square Regular";
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	padding: 20px
+}
+
+
+a.btn{
+	background-color: Transparent;
+	border: 2px solid white;
+	color: white;
+	font-family: "Square Regular";
+	font-size: 20px;
+	opacity: 100%;
+}
+
+a:hover{
+	background-color: white;
+	color: black;
+}
+
+hr {
+	width: 150px;
+	height: 2px;
+	background: linear-gradient(#FF11DE, #FF07BA);
+	border: 0;
+	margin-bottom: 80px;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 125px 100px;
+}
+
+@media (max-width: 1000px){
+
+	section{
+		padding: 100px 50px;
+	}
+
+}
+
+@media (max-width: 600px){
+
+	section{
+		padding: 80px 30px;
+	}
+
+}
+
+section h3.title{
+	color: white;
+	text-transform: uppercase; 
+	font-family: "Dredd Black";
+	font-size: 35px;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+section p{
+	font-family: "Square Regular";
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+
+ul.grid{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+@font-face {
+	font-family: 'Square Regular';
+	src: url("fonts/Square-Regular.otf") format("opentype");
+}
+@font-face {
+	font-family: "Dredd Black";
+	src: url("fonts/dredd.otf") format("opentype");
+}
+
+
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 35px 100px 0;
+}
+
+header h2{
+	font-family: 'Quicksand', sans-serif;
+}
+
+header nav{
+	display: flex;
+}
+
+header nav li{
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+header nav li:first-child{
+	margin-left: 0;	
+}
+
+header nav li:last-child{
+	margin-right: 0;	
+}
+
+
+
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+
+@media (max-width: 700px){
+	header{
+		flex-direction: column;		
+	}
+
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+
+
+
+
+.hero{
+	position: relative;
+	justify-content: left;
+	min-height: 100vh;
+	color: #fff;
+	text-align: left;
+}
+
+.hero .background-image{
+	background-image: url("img/Artboard.png");
+	background-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+}
+
+.hero h1{
+    font-family: "Dredd Black";
+    text-transform: uppercase;
+    font-size: 60px;
+    width: 70%;
+    text-align: left;
+	margin-top: 200px;
+}
+
+.hero h3{
+	font-family: "Square Regular";
+	font-size: 20px;
+	margin-bottom: 40px;
+	text-align: left;
+	padding-top: 20px;
+	width: 70%;
+}
+
+.hero a.btn{
+    padding: 15px 46px;
+}
+
+@media (max-width: 800px){
+
+	.hero{
+		min-height: 600px;
+	}
+
+	.hero h1{
+		font-size: 48px;
+	}
+
+	.hero h3{
+		font-size: 24px;
+	}
+
+	.hero a.btn{
+		padding: 15px 40px;
+	}
+
+}
+
+
+
+
+.gallery{
+	background-color: black;
+}
+
+.gallery .grid li{
+	padding: 20px;
+	height: 350px;
+	border-radius: 3px;
+
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+	background-color: #333;
+}
+
+.gallery .grid li.small{
+	flex-basis: 40%;
+}
+#small-1 {
+	background-image: url("img/A1.png");
+}
+#small-2 {
+	background-image: url("img/A1 3.png");
+}
+.gallery .grid li.large{
+	flex-basis: 60%;
+}
+#large-1 {
+	background-image: url("img/pexels-mali-maeder-219095.jpg");
+}
+#large-2 {
+	background-image: url("img/eca41783652013.5d4451461c889.jpg");
+}
+
+@media (max-width: 1000px){
+
+	.gallery .grid li.small,
+	.gallery.grid li.large{
+		flex-basis: 100%;
+	}
+
+}
+
+
+
+
+
+.news{
+	background-color: #131415;
+}
+
+.news .grid li{
+	margin: 50px;
+	padding: 0 20px;
+	flex-basis: 10%;
+	text-align: center;
+}
+
+.news .grid li h4{
+	font-family: 'Dredd Black';
+	text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 100px;
+    padding-top: 45px;
+}
+.news .grid li p{
+	padding-right: 20px;
+	padding-left: 20px;
+	color: white;
+	background-color: #414141;
+}
+#news-block-1 {
+	background-image: url("img/news 1.png");
+	background-size: cover;
+}
+#news-block-2 {
+	background-image: url("img/news 2.png");
+	background-size: cover;
+}
+#news-block-3 {
+	background-image: url("img/news 3.png");
+	background-size: cover;
+}
+@media (max-width: 1000px){
+
+	.news .grid li{
+		flex-basis: 70%;
+		margin-bottom: 65px;
+	}
+
+	.news .grid li:last-child{
+		margin-bottom: 0;
+	}
+
+}
+
+
+@media (max-width: 600px){
+
+	.news .grid li{
+		flex-basis: 100%;
+	}
+
+}
+
+
+
+.delivery{
+	background-color: #C8C2BD;
+	background-image: url("img/Rectangle.png");
+	background-size: cover;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	
+	
+}
+.delivery .title {
+	color: black;
+}
+.delivery .grid{
+	margin: 50px;
+	display: flex;
+	text-align: center;
+	
+	
+}
+.delivery .delivery-block {
+	border: 2px solid black;
+	margin: 50px;
+}
+.delivery img {
+	margin: 40px;
+}
+.delivery h4 {
+	font-family: 'Dredd Black';
+	text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+    margin-top: 80px;
+	padding: 20px;
+	border-top: 2px solid black;
+	text-align: center;
+} 
+
+@media (max-width: 1000px){
+	
+	.delivery .grid {
+		flex-direction: row;
+	}
+
+	.delivery .grid:last-child{
+		margin-bottom: 0;
+	}
+
+}
+
+
+@media (max-width: 600px){
+
+	.delivery .grid {
+		flex-direction: column;
+	}
+
+}
+
+
+
+
+
+.contact{
+	background-image: url("img/Bitmap.png");
+	background-attachment: fixed;
+	background-size: cover;
+}
+.contact p {
+	color: white;
+}
+
+.contact form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	max-width: 800px;
+	width: 80%;
+}
+
+.contact form input{
+	padding: 15px;
+	flex: 1;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+}
+
+.contact form .btn{
+	padding: 18px 42px;
+}
+
+
+@media (max-width: 800px){
+
+	.contact form input{
+		flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+
+}
+
+
